@@ -1,3 +1,4 @@
+import { terminalRunner } from "@/lib/terminalRunner";
 import type { CreateSessionResult, Session } from "../types/session.types";
 import { sessionRepository } from "@/repositories/session.repository";
 
@@ -16,6 +17,7 @@ export class SessionService {
 
   async closeSession(sessionId: string): Promise<void> {
     await sessionRepository.close(sessionId);
+    terminalRunner.stop(sessionId);
   }
 }
 

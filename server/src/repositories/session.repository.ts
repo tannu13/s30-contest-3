@@ -49,6 +49,7 @@ export class SessionRepository {
     await db
       .update(sessions)
       .set({
+        status: "CLOSED",
         closedAt: sql`(unixepoch() * 1000)`,
       })
       .where(eq(sessions.id, sessionId));
