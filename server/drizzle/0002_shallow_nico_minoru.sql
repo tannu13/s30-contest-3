@@ -1,0 +1,1 @@
+ALTER TABLE `sessins` ADD `closed_at` integer NOT NULL;

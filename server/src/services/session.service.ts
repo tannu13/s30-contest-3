@@ -1,16 +1,21 @@
-import type { CreateSessionResult } from "../types/session.types";
+import type { CreateSessionResult, Session } from "../types/session.types";
+import { sessionRepository } from "@/repositories/session.repository";
 
 export class SessionService {
   async createSession(): Promise<CreateSessionResult> {
-    throw new Error("TODO");
+    const session = await sessionRepository.create();
+    return {
+      sessionId: session.id,
+      url: `/session/${session.id}`,
+    };
   }
 
-  async getSession(_sessionId: string): Promise<void> {
-    throw new Error("TODO");
+  async getSession(sessionId: string): Promise<Session | null> {
+    return await sessionRepository.findById(sessionId);
   }
 
-  async closeSession(_sessionId: string): Promise<void> {
-    throw new Error("TODO");
+  async closeSession(sessionId: string): Promise<void> {
+    await sessionRepository.close(sessionId);
   }
 }
 

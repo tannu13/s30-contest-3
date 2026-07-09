@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1783603959235,
+      "tag": "0000_pink_synch",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1783604287350,
+      "tag": "0001_freezing_joystick",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1783605424819,
+      "tag": "0002_shallow_nico_minoru",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1783605462119,
+      "tag": "0003_amazing_gauntlet",
+      "breakpoints": true
+    }
+  ]
+}
